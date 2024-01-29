@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--bootstrap cdn-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   <!-- Font Awesome CSS -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xr26JNX+qaN2jLki18lWj2FWZdUqZ5m4+eD9lGd3v9I2wzTYfB/Q/n7d4ifHBkzR5WA4Txa6vP+WpdQyEP9Q5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--custom css-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="container-fluid">
+    <div class="row topbar">
+      <div class="col-sm-2">
+        <span class="logo">YourLogo</span>
+      </div>
+      <div class="col-sm-2">
+        <!-- Select Box -->
+        <select class="form-control">
+          <option disabled selected><i class="fas fa-map-marker-alt"></i>-Select Location-</option>
+          <option>wayand</option>
+          <option>malappuram</option>
+          <option>kozhikkode</option>
+        </select>
+      </div>
+      <div class="col-sm-4">
+        <!-- Search Bar -->
+        <form action="#" method="post" id="searchForm">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search...">
+            <div class="input-group-append">
+              <button class="search-button" type="submit"><span><i class="fas fa-search"></i></span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-1">
+        <!-- Profile Icon -->
+        <a href="profile.html"><span class="fas fa-user-circle fa-2x"></span></a>
+      </div>
+      <div class="col-md-1">
+        <!-- Favorite Icon -->
+        <a href="favorites.html"><span class="fas fa-heart fa-2x"></span></a>
+      </div>
+      <div class="col-md-1">
+        <!-- Cart Icon -->
+        <a href="cart.html"><span class="fas fa-shopping-cart fa-2x"></span></a>
+      </div>
+      <div class="col-md-1 dropdown">
+        <!-- Menu Icon with Dropdown -->
+        <span class="fas fa-bars fa-2x"></span>
+        <div class="dropdown-content">
+            <a href="#">Menu Item 1</a>
+            <a href="#">Menu Item 2</a>
+            <a href="#">Menu Item 3</a>
+            <a href="#">Menu Item 3</a>
+        </div>
+    </div>
+  </div>
+
+
+  <!--nav bar-->
+  <nav class="navbar">
+    <div class="navbar-icons">
+      <div class="nav-icon">
+        <a href="#"><i class="fas fa-car"></i></a>
+        <span>Vehicles</span>
+      </div>
+      <div class="nav-icon">
+        <a href="#"><i class="fas fa-couch"></i></a>
+        <span>Furnitures</span>
+      </div>
+      <div class="nav-icon">
+        <a href="#"> <i class="fas fa-mobile "></i></a>
+        <span>Gadgets</span>
+      </div>
+      <div class="nav-icon">
+        <a href="#"> <i class="fas fa-building "></i></a>
+        <span>Properties</span>
+      </div>      
+    </div>
+    <div class="add">
+      <div class="add-icon">
+        <a href="#"><span><i class="fas fa-plus"></i></span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- products -->
+  <div class="products">
+    <div class="filter">
+      <select class="filter" id="filterSelect">
+        <option value="all">all</option>
+        <option value="buy">buy</option>
+        <option value="rent">Rent</option>
+      </select>
+      <button class="prdct-fltr" onclick="navigateToButton()">Go</button>
+    </div>
+
+    <div class="productlist">
+      <!--products lists here-->
+      
+   <div class="card">
+        <div class="card-image">
+           <img src="https://placekitten.com/300/200" alt="Product Image">
+           <!--change data rating here-->
+          <span class="review-stars" data-rating="3"></span> 
+       </div>
+       <a href="#" class="favorites-icon"><i class="fas fa-heart"></i></a>
+         <div class="product-details">
+       <div class="product-name">Product Name</div>
+          <div class="discription"><p>products description here</p></div>
+        </div>
+      <div class="card-footer">
+      <span class="text-title">$499.49</span>
+      <div class="card-button">
+        <a href="#"><svg class="svg-icon" style="width: 45px;" viewBox="0 0 20 20">
+            <text x="-8" y="12" font-size="10" style="font-weight: 600;">Buy now</text>
+        </svg></a>
+      </div>
+      <div class="card-button">
+      <a href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+        <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
+        <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
+        <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
+      </svg></a>
+    </div>
+    </div>
+   </div>
+   
+    </div>
+  </div>
+
+  <!-- Add Bootstrap and Font Awesome CDNs -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

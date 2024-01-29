@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carattere&family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xr26JNX+qaN2jLki18lWj2FWZdUqZ5m4+eD9lGd3v9I2wzTYfB/Q/n7d4ifHBkzR5WA4Txa6vP+WpdQyEP9Q5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <!--bootstrap cdn-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .topbar {
+            background-color: #033067;
+            color: #fff;
+            padding: 10px;
+            text-align: right;
+            
+        }
+
+        .icons {
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        .profile-icon,
+        .menu-icon {
+            display: inline-block;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .profile-icon a,
+        .menu-icon a{
+            color: #fff;
+        }
+
+        .back-button{
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .fav{
+            margin-left: 30px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    right: 4px;
+    left: auto;
+  display: none;
+  position: absolute;
+  background-color: #033067;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+  color: #0f3d75;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.product-container {
+  margin-left: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 40px;
+}
+
+
+.img-card img {
+  width: 100%;
+  border-radius: 4px;
+  height: 320px;
+  object-fit:cover;
+}
+
+.small-Card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 15px;
+  gap: 12px;
+}
+
+.small-Card img {
+  width: 304px;
+  height: 204px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.small-Card img:active {
+  border: 1px solid #17696a;
+}
+
+.sm-card {
+  border: 2px solid darkred;
+}
+
+.product-info{
+  width: 60%;
+}
+.product-info h3 {
+  font-size: 32px;
+  font-family: Lato;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.product-info h5 {
+  font-size: 24px;
+  font-family: Lato;
+  font-weight: 500;
+  line-height: 130%;
+  color: #ff4242;
+  margin: 6px 0;
+}
+
+.product-info del {
+  color: #a9a9a9;
+}
+
+.product-info p {
+  color: #424551;
+  margin: 15px 0;
+  width: 70%;
+}
+
+.sizes p {
+  font-size: 22px;
+  color: black;
+}
+
+.size-option {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.quantity input {
+  width: 51px;
+  height: 33px;
+  margin-bottom: 15px;
+  padding: 6px;
+}
+
+button {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 10px 37px;
+  border: none;
+  border: #033067 solid 2px;
+  color: #033067;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #033067;
+  color: #fff;
+  transition: ease-in 0.4s;
+}
+
+.details{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 576px) {
+  .product-container{
+    flex-direction: column;
+  }
+  .small-Card img{
+    width: 80px;
+  }
+  .product-info{
+    width: 100%;
+  }
+  .product-info p{
+    width: 100%;
+  }
+
+  .delivery{
+    width: 100%;
+  }
+
+  hr{
+    width: 100%;
+  }
+}
+
+.card {
+  width: 350px;
+  height: 150px;
+  background: #f7f9f9;
+  padding: 5px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__title {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: auto;
+}
+
+
+
+.card__button {
+  cursor: pointer;
+  background-color: rgb(5, 27, 0);
+  color: #f7f9f9;
+  font-size: 1em;
+
+  padding:0 5px;
+  border-radius: 15px;
+}
+
+.card__button:hover {
+  background-color: rgb(38, 179, 7);
+}
+
+.map-btn a{
+  color: #033067;
+}
+.map-btn:hover a{
+  color:#fff;
+} 
+    </style>
+</head>
+<body>
+
+  <!--topbar-->
+  <div class="topbar">
+    <div class="icons">
+      <div class="profile-icon">
+        <a href="index.html"><span class="fas fa-home fa-2x"></span></a>
+    </div>
+      <div class="profile-icon">
+          <a href="favorites.html"><span class="fas fa-heart fa-2x"></span></a>
+      </div>
+      <div class="profile-icon">
+          <a href="cart.html"><span class="fas fa-shopping-cart fa-2x"></span></a>
+      </div>
+      <div class="profile-icon">
+          <a href="#"><span class="fas fa-user-circle fa-2x"></span></a>
+        </div>
+
+        <!-- Menu Icon -->
+        <div class="menu-icon dropdown">
+            <!-- Menu Icon with Dropdown -->
+            <span class="fas fa-bars fa-2x"></span>
+            <div class="dropdown-content">
+                <a href="#">Menu Item 1</a>
+                <a href="#">Menu Item 2</a>
+                <a href="#">Menu Item 3</a>
+                <a href="#">Menu Item 3</a>
+            </div>
+        </div>
+    </div>
+  </div>
+   
+  <div class="details">
+    <div class="back-button">
+      <a href="javascript:history.back()">
+        <span class="material-symbols-outlined">
+           arrow_back
+        </span>
+      </a>
+    </div>
+    <section class="product-container">
+      <!-- left side -->
+      <div class="img-card">
+          <img src="image.jpg" alt="" id="featured-image">
+          <!-- small img -->
+          <div class="small-Card">
+              <img src="image.jpg" alt="" class="small-Img">
+              <img src="image.jpg" alt="" class="small-Img">  
+          </div>
+      </div>
+      <!-- Right side -->
+      <div class="product-info">
+          <h3>product name here</h3>
+          <h5>Price: $140 </h5>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa accusantium, aspernatur provident beatae corporis veniam atque facilis, consequuntur assumenda, vitae dignissimos iste exercitationem dolor eveniet alias eos ullam nesciunt voluptatum.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusamus natus dolorum. Quaerat nulla quod doloremque, officia quis provident amet adipisci unde esse iure delectus, maxime inventore optio fuga nisi?</p>
+          <div class="contact" style="display: flex; flex-wrap: wrap;">
+              <div class="card">
+                <!--owner name here-->
+                <h4><span class="fas fa-user-circle fas-2x" ></span>John Doe</h4>
+                <button class="card__button" onclick="openWhatsApp()">
+                  <span><img src="WhatsApp.png" alt="WhatsApp" width="50" height="40">
+                    Chat with Owner
+                  </span>
+                </button>
+              </div>
+
+              <!-- location link here -->
+              <button class="map-btn"><a href="#"><span class="material-symbols-outlined">
+                pin_drop
+                </span>Go to location on map</a>
+                </button>
+          </div>
+        
+           <!--if rent-->
+           <div class="quantity">
+              <button>Rent now</button>
+              <button>Add to favorites</button>
+          </div>
+
+
+            <!--if buy-->
+          <div class="quantity">
+            <button>Add to favorites</button>
+            <button>Add to cart</button>
+            <button>Buy now</button>
+          </div>
+
+
+        </div>
+     </section>
+
+     <!--review -->
+     <div class="review" style="background-color: #ffffff; color: #615f5f; margin:100px auto; font-family: 'Carattere', cursive;
+     font-family: 'PT Sans Narrow', sans-serif;">
+      <div class="container mt-3">
+        <h2 class="text-center mb-4">Customer Reviews</h2>
+        <div id="reviewCarousel" class="carousel slide" data-ride="carousel" data-interval="1000">
+          <div class="carousel-inner">
+      
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-1">
+                  <p class="lead">"Thrilled with my purchase! Exceeded my expectations. Highly recommend."</p>
+                  <span class="review-stars" data-rating="5"></span> 
+                  <p class="font-italic">- Sarah J.</p>
+                </div>
+                <div class="col-md-4">
+                  <p class="lead">"Amazing quality and attention to detail. Happy customer!"</p>
+                  <span class="review-stars" data-rating="5"></span> 
+                  <p class="font-italic">- Michael R.</p>
+                </div>
+                <div class="col-md-4">
+                  <p class="lead">"Impressive functionality. Made a significant difference. Couldn't be happier!"</p>
+                  <span class="review-stars" data-rating="5"></span> 
+                  <p class="font-italic">- Emily S.</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="lead">"Outstanding product! Exceeded expectations. Recommend it to everyone."</p>
+                  <span class="review-stars" data-rating="5"></span> 
+                  <p class="font-italic">- John D.</p>
+                </div>
+                <div class="col-md-4">
+                  <p class="lead">"Top-notch quality. Very satisfied with my purchase."</p>
+                  <span class="review-stars" data-rating="5"></span> 
+                  <p class="font-italic">- Amanda L.</p>
+                </div>
+                <div class="col-md-4">
+                  <p class="lead">"Easy to use and effective. Great value for money!"</p>
+                  <span class="review-stars" data-rating="5"></span> 
+                  <p class="font-italic">- Robert M.</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="lead">"Fantastic product! Changed my daily routine for the better."</p>
+                  <span class="review-stars" data-rating="5"></span> 
+                  <p class="font-italic">- Lisa K.</p>
+                </div>
+                <div class="col-md-4">
+                  <p class="lead">"Well-designed and reliable. Very happy with my purchase."</p>
+                  <span class="review-stars" data-rating="5"></span> 
+                  <p class="font-italic">- Mark P.</p>
+                </div>
+                <div class="col-md-4">
+                  <p class="lead">"Great customer service. The team is dedicated to excellence."</p>
+                  <span class="review-stars" data-rating="5"></span> 
+                  <p class="font-italic">- Jessica W.</p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+      
+          <!-- Navigation Buttons -->
+          <a class="carousel-control-prev" href="#reviewCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#reviewCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+      
+        </div>
+      
+      </div>
+     </div>
+  </div>
+
+         
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+
+    <script src="script.js"></script> 
+</body>
+</html>
+
+
